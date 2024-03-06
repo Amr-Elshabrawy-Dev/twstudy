@@ -61,7 +61,7 @@ Test the performance of the webpage after deploy by using [GTmetrix](https://gtm
 
 <div align="center">
 <a target="_blank" href="https://github.com/amr-elshabrawy-dev">
-<img  src="./img/amr-logo.svg" alt="amr logo" width="80px">
+<img  src="./img/info/amr-logo.svg" alt="amr logo" width="80px">
 <p style="margin-bottom:0"> 2024 &copy; Amr Elshabrawy</p>
 </a>
 </div>
