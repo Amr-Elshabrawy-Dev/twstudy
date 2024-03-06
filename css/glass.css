@@ -1,0 +1,161 @@
+html::before,
+html::after {
+  content: "";
+  position: fixed;
+  z-index: -2;
+  border-radius: 50%;
+}
+
+html::before {
+  height: 100px;
+  width: 100px;
+  top: 20%;
+  left: calc(50% - 650px);
+  background-image: linear-gradient(to right bottom, var(--decoration-bg-1), var(--WHITE));
+}
+
+html::after {
+  height: 150px;
+  width: 150px;
+  bottom: 20%;
+  right: calc(50% - 675px);
+  background-image: linear-gradient(to left bottom, var(--decoration-bg-2), var(--WHITE));
+}
+
+body {
+  --white: hsl(0, 0%, 100%, 0.25);
+  --border-1: hsl(0, 0%, 0%, 0.1);
+  --border-2: hsl(0, 0%, 100%, 0.4);
+  --shadow: none;
+  --backdrop-filter-blur: blur(5px);
+  background-image: linear-gradient(to right, var(--body-gradient-bg-1), var(--body-gradient-bg-2));
+  background-attachment: fixed;
+  padding: 40px 0;
+}
+
+/* - Control Lightness Using Opacity Property - */
+body::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--WHITE);
+  opacity: 0.3;
+  z-index: -3;
+}
+
+.main-wrapper {
+  max-width: 1200px;
+  background-color: var(--white);
+  border: 1px solid var(--border-2);
+  margin: auto;
+  border-radius: 20px;
+  position: relative;
+}
+
+.main-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: var(--backdrop-filter-blur);
+  -webkit-backdrop-filter: var(--backdrop-filter-blur);
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.header .sub-menu,
+.box {
+  border: 1px solid var(--border-2);
+}
+
+.header-backdrop,
+.header .sub-menu,
+.modal,
+.box,
+.style-switcher {
+  backdrop-filter: var(--backdrop-filter-blur);
+  -webkit-backdrop-filter: var(--backdrop-filter-blur);
+}
+
+.modal-backdrop {
+  background-color: var(--white);
+}
+
+.header-backdrop.active {
+  opacity: 1;
+}
+
+/* ---------------- Glass Dark ---------------- */
+body.dark {
+  --border-1: hsla(0, 0%, 100%, 0.15);
+  --border-2: hsla(0, 0%, 100%, 0.07);
+  --white: hsla(0, 0%, 100%, 0.05);
+  --shadow: none;
+}
+
+/* - Control Darkness Using Opacity Property - */
+body.dark::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--BLACK);
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 1199px) {
+  body {
+    padding: 40px 30px;
+  }
+
+  html::before {
+    height: 85px;
+    width: 85px;
+    left: -35px;
+    top: 10%;
+  }
+
+  html::after {
+    height: 130px;
+    width: 130px;
+    right: -50px;
+    bottom: 10%;
+  }
+}
+@media (max-width: 991px) {
+  .header-menu {
+    backdrop-filter: var(--backdrop-filter-blur);
+    -webkit-backdrop-filter: var(--backdrop-filter-blur);
+  }
+
+  .header .sub-menu {
+    border: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    padding: 35px 15px;
+  }
+
+  html::before {
+    height: 70px;
+    width: 70px;
+  }
+
+  html::after {
+    height: 110px;
+    width: 110px;
+  }
+}
