@@ -1,7 +1,7 @@
 <h1 align="center">  Amr Elshabrawy</h1>
 
 <a href="https://amr-elshabrawy-dev.github.io/twstudy/" target="_blank">
-<img width="100%" src="./img/screencapture.webp" alt="twstudy Website">
+<img width="100%" src="./img/info/screencapture.webp" alt="twstudy Website">
 </a>
 
 ### 👁️ Project Preview
