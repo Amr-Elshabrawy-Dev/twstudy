@@ -44,7 +44,7 @@
 
 Test the performance of the webpage after deploy by using [GTmetrix](https://gtmetrix.com/).
 
-![Project Performance result](./img/SharedScreenshot.webp)
+![Project Performance result](./img/info/SharedScreenshot.webp)
 
 ---
 
